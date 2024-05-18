@@ -1,0 +1,34 @@
+[2024-05-19 02:34:56,608] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:03.051208+00:00 [queued]>
+[2024-05-19 02:34:56,611] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:03.051208+00:00 [queued]>
+[2024-05-19 02:34:56,611] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-19 02:34:56,611] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2024-05-19 02:34:56,611] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2024-05-19 02:34:56,615] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): unzip_data> on 2024-05-18 21:04:03.051208+00:00
+[2024-05-19 02:34:56,624] {standard_task_runner.py:52} INFO - Started process 36355 to run task
+[2024-05-19 02:34:56,629] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py', '--cfg-path', '/var/folders/hr/cn8gd6d15xv_6m22yptdtyhw0000gn/T/tmp3arrxwf5', '--error-file', '/var/folders/hr/cn8gd6d15xv_6m22yptdtyhw0000gn/T/tmpj2hvdpok']
+[2024-05-19 02:34:56,630] {standard_task_runner.py:77} INFO - Job 13: Subtask unzip_data
+[2024-05-19 02:34:56,651] {logging_mixin.py:109} INFO - Running <TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:03.051208+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2024-05-19 02:34:56,667] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=keypoints_dag
+AIRFLOW_CTX_TASK_ID=unzip_data
+AIRFLOW_CTX_EXECUTION_DATE=2024-05-18T21:04:03.051208+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-05-18T21:04:03.051208+00:00
+[2024-05-19 02:34:56,670] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2024-05-19 02:34:56,671] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+[2024-05-19 02:34:56,672] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+[2024-05-19 02:34:56,672] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+[2024-05-19 02:34:56,672] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,673] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,673] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'prev_execution_date' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,674] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'prev_execution_date_success' from the template is deprecated and will be removed in a future version. Please use 'prev_data_interval_start_success' instead.
+[2024-05-19 02:34:56,674] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,675] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,675] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:56,676] {logging_mixin.py:109} WARNING - /Users/nikhilanand/airflow_venv/lib/python3.9/site-packages/airflow/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+[2024-05-19 02:34:57,353] {python.py:175} INFO - Done. Returned value was: None
+[2024-05-19 02:34:57,356] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=keypoints_dag, task_id=unzip_data, execution_date=20240518T210403, start_date=20240518T210456, end_date=20240518T210457
+[2024-05-19 02:34:57,407] {local_task_job.py:154} INFO - Task exited with return code 0
+[2024-05-19 02:34:57,419] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,180 @@
+2024-05-19 02:27:40,137 INFO - Starting the scheduler
+2024-05-19 02:27:40,137 INFO - Processing each file at most -1 times
+2024-05-19 02:27:40,148 INFO - Launched DagFileProcessorManager with pid: 30635
+2024-05-19 02:27:40,151 INFO - Resetting orphaned tasks for active dag runs
+2024-05-19 02:29:24,198 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
+2024-05-19 02:29:24,219 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.fetch_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:24,220 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:29:24,221 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:29:24,221 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.fetch_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:24,222 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='fetch_data', run_id='scheduled__2024-05-17T00:00:00+00:00', try_number=1) to executor with priority 3 and queue default
+2024-05-19 02:29:24,222 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:29:24,223 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:29:49,642 INFO - Executor reports execution of keypoints_dag.fetch_data run_id=scheduled__2024-05-17T00:00:00+00:00 exited with status success for try_number 1
+2024-05-19 02:29:49,647 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=fetch_data, run_id=scheduled__2024-05-17T00:00:00+00:00, run_start_date=2024-05-18 20:59:25.436507+00:00, run_end_date=2024-05-18 20:59:49.436312+00:00, run_duration=23.999805, state=success, executor_state=success, try_number=1, max_tries=0, job_id=2, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2024-05-19 02:29:50,536 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.unzip_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:50,537 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:29:50,537 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:29:50,538 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.unzip_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:50,539 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='unzip_data', run_id='scheduled__2024-05-17T00:00:00+00:00', try_number=1) to executor with priority 2 and queue default
+2024-05-19 02:29:50,539 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:29:50,540 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:29:52,687 INFO - Executor reports execution of keypoints_dag.unzip_data run_id=scheduled__2024-05-17T00:00:00+00:00 exited with status success for try_number 1
+2024-05-19 02:29:52,692 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=unzip_data, run_id=scheduled__2024-05-17T00:00:00+00:00, run_start_date=2024-05-18 20:59:51.740397+00:00, run_end_date=2024-05-18 20:59:52.516841+00:00, run_duration=0.776444, state=success, executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator
+2024-05-19 02:29:53,534 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.preprocess_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:53,535 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:29:53,535 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:29:53,535 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.preprocess_data scheduled__2024-05-17T00:00:00+00:00 [scheduled]>
+2024-05-19 02:29:53,536 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='preprocess_data', run_id='scheduled__2024-05-17T00:00:00+00:00', try_number=1) to executor with priority 1 and queue default
+2024-05-19 02:29:53,536 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:29:53,537 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'scheduled__2024-05-17T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:30:02,985 INFO - Executor reports execution of keypoints_dag.preprocess_data run_id=scheduled__2024-05-17T00:00:00+00:00 exited with status success for try_number 1
+2024-05-19 02:30:02,992 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=preprocess_data, run_id=scheduled__2024-05-17T00:00:00+00:00, run_start_date=2024-05-18 20:59:54.720098+00:00, run_end_date=2024-05-18 21:00:02.770710+00:00, run_duration=8.050612, state=success, executor_state=success, try_number=1, max_tries=0, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator
+2024-05-19 02:30:03,897 INFO - Marking run <DagRun keypoints_dag @ 2024-05-17 00:00:00+00:00: scheduled__2024-05-17T00:00:00+00:00, externally triggered: False> successful
+2024-05-19 02:30:03,923 INFO - DagRun Finished: dag_id=keypoints_dag, execution_date=2024-05-17 00:00:00+00:00, run_id=scheduled__2024-05-17T00:00:00+00:00, run_start_date=2024-05-18 20:59:24.203844+00:00, run_end_date=2024-05-18 21:00:03.923788+00:00, run_duration=39.719944, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2024-05-17 00:00:00+00:00, data_interval_end=2024-05-18 00:00:00+00:00, dag_hash=473479d011a0d3fec520b125556f37a4
+2024-05-19 02:30:03,925 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
+2024-05-19 02:30:53,499 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:30:53,500 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:30:53,500 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:30:53,500 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:30:53,501 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='fetch_data', run_id='manual__2024-05-18T21:00:52.693658+00:00', try_number=1) to executor with priority 3 and queue default
+2024-05-19 02:30:53,501 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:30:53,502 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:31:26,989 INFO - Executor reports execution of keypoints_dag.fetch_data run_id=manual__2024-05-18T21:00:52.693658+00:00 exited with status success for try_number 1
+2024-05-19 02:31:26,994 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=fetch_data, run_id=manual__2024-05-18T21:00:52.693658+00:00, run_start_date=2024-05-18 21:00:54.981068+00:00, run_end_date=2024-05-18 21:01:26.772594+00:00, run_duration=31.791526, state=success, executor_state=success, try_number=1, max_tries=0, job_id=5, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2024-05-19 02:31:27,873 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:31:27,873 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:31:27,874 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:31:27,874 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:31:27,875 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='unzip_data', run_id='manual__2024-05-18T21:00:52.693658+00:00', try_number=1) to executor with priority 2 and queue default
+2024-05-19 02:31:27,875 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:31:27,876 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:31:29,987 INFO - Executor reports execution of keypoints_dag.unzip_data run_id=manual__2024-05-18T21:00:52.693658+00:00 exited with status success for try_number 1
+2024-05-19 02:31:29,993 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=unzip_data, run_id=manual__2024-05-18T21:00:52.693658+00:00, run_start_date=2024-05-18 21:01:29.054580+00:00, run_end_date=2024-05-18 21:01:29.788383+00:00, run_duration=0.733803, state=success, executor_state=success, try_number=1, max_tries=0, job_id=6, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator
+2024-05-19 02:31:30,808 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:31:30,809 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:31:30,809 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:31:30,809 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:00:52.693658+00:00 [scheduled]>
+2024-05-19 02:31:30,810 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='preprocess_data', run_id='manual__2024-05-18T21:00:52.693658+00:00', try_number=1) to executor with priority 1 and queue default
+2024-05-19 02:31:30,811 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:31:30,811 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:00:52.693658+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:31:41,020 INFO - Executor reports execution of keypoints_dag.preprocess_data run_id=manual__2024-05-18T21:00:52.693658+00:00 exited with status success for try_number 1
+2024-05-19 02:31:41,026 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=preprocess_data, run_id=manual__2024-05-18T21:00:52.693658+00:00, run_start_date=2024-05-18 21:01:31.983654+00:00, run_end_date=2024-05-18 21:01:40.785643+00:00, run_duration=8.801989, state=success, executor_state=success, try_number=1, max_tries=0, job_id=7, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator
+2024-05-19 02:31:41,971 INFO - Marking run <DagRun keypoints_dag @ 2024-05-18 21:00:52.693658+00:00: manual__2024-05-18T21:00:52.693658+00:00, externally triggered: True> successful
+2024-05-19 02:31:41,972 INFO - DagRun Finished: dag_id=keypoints_dag, execution_date=2024-05-18 21:00:52.693658+00:00, run_id=manual__2024-05-18T21:00:52.693658+00:00, run_start_date=2024-05-18 21:00:53.483686+00:00, run_end_date=2024-05-18 21:01:41.972051+00:00, run_duration=48.488365, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-05-17 00:00:00+00:00, data_interval_end=2024-05-18 00:00:00+00:00, dag_hash=8ac10d0c2089adc9d4233de09dea4e92
+2024-05-19 02:31:41,973 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
+2024-05-19 02:32:41,262 INFO - Resetting orphaned tasks for active dag runs
+2024-05-19 02:32:49,077 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:32:49,078 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:32:49,078 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:32:49,078 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:32:49,079 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='fetch_data', run_id='manual__2024-05-18T21:02:48.169972+00:00', try_number=1) to executor with priority 3 and queue default
+2024-05-19 02:32:49,079 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:32:49,080 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:33:16,123 INFO - Executor reports execution of keypoints_dag.fetch_data run_id=manual__2024-05-18T21:02:48.169972+00:00 exited with status success for try_number 1
+2024-05-19 02:33:16,128 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=fetch_data, run_id=manual__2024-05-18T21:02:48.169972+00:00, run_start_date=2024-05-18 21:02:50.359355+00:00, run_end_date=2024-05-18 21:03:15.930895+00:00, run_duration=25.57154, state=success, executor_state=success, try_number=1, max_tries=0, job_id=8, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2024-05-19 02:33:17,023 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:33:17,024 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:33:17,024 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:33:17,025 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:33:17,025 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='unzip_data', run_id='manual__2024-05-18T21:02:48.169972+00:00', try_number=1) to executor with priority 2 and queue default
+2024-05-19 02:33:17,026 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:33:17,026 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:33:19,134 INFO - Executor reports execution of keypoints_dag.unzip_data run_id=manual__2024-05-18T21:02:48.169972+00:00 exited with status success for try_number 1
+2024-05-19 02:33:19,140 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=unzip_data, run_id=manual__2024-05-18T21:02:48.169972+00:00, run_start_date=2024-05-18 21:03:18.206612+00:00, run_end_date=2024-05-18 21:03:18.953372+00:00, run_duration=0.74676, state=success, executor_state=success, try_number=1, max_tries=0, job_id=9, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator
+2024-05-19 02:33:20,010 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:33:20,011 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:33:20,011 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:33:20,011 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:02:48.169972+00:00 [scheduled]>
+2024-05-19 02:33:20,012 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='preprocess_data', run_id='manual__2024-05-18T21:02:48.169972+00:00', try_number=1) to executor with priority 1 and queue default
+2024-05-19 02:33:20,012 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:33:20,013 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:02:48.169972+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:33:21,483 INFO - Executor reports execution of keypoints_dag.preprocess_data run_id=manual__2024-05-18T21:02:48.169972+00:00 exited with status success for try_number 1
+2024-05-19 02:33:21,488 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=preprocess_data, run_id=manual__2024-05-18T21:02:48.169972+00:00, run_start_date=2024-05-18 21:03:21.196424+00:00, run_end_date=2024-05-18 21:03:21.272430+00:00, run_duration=0.076006, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator
+2024-05-19 02:33:22,459 ERROR - Marking run <DagRun keypoints_dag @ 2024-05-18 21:02:48.169972+00:00: manual__2024-05-18T21:02:48.169972+00:00, externally triggered: True> failed
+2024-05-19 02:33:22,459 INFO - DagRun Finished: dag_id=keypoints_dag, execution_date=2024-05-18 21:02:48.169972+00:00, run_id=manual__2024-05-18T21:02:48.169972+00:00, run_start_date=2024-05-18 21:02:49.060995+00:00, run_end_date=2024-05-18 21:03:22.459537+00:00, run_duration=33.398542, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-05-17 00:00:00+00:00, data_interval_end=2024-05-18 00:00:00+00:00, dag_hash=5d7d011f98c4ba0d1ded6f56d4f2610b
+2024-05-19 02:33:22,461 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
+2024-05-19 02:34:04,181 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:04,182 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:34:04,182 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:34:04,183 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:04,184 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='fetch_data', run_id='manual__2024-05-18T21:04:03.051208+00:00', try_number=1) to executor with priority 3 and queue default
+2024-05-19 02:34:04,184 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:04,185 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:28,518 INFO - Executor reports execution of keypoints_dag.fetch_data run_id=manual__2024-05-18T21:04:03.051208+00:00 exited with status success for try_number 1
+2024-05-19 02:34:28,525 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=fetch_data, run_id=manual__2024-05-18T21:04:03.051208+00:00, run_start_date=2024-05-18 21:04:05.499654+00:00, run_end_date=2024-05-18 21:04:28.288184+00:00, run_duration=22.78853, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2024-05-19 02:34:29,557 INFO - 2 tasks up for execution:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:29,557 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+2024-05-19 02:34:29,558 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:34:29,558 INFO - DAG keypoints_dag has 1/16 running and queued tasks
+2024-05-19 02:34:29,558 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.fetch_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:29,559 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='fetch_data', run_id='manual__2024-05-18T21:04:07.629303+00:00', try_number=1) to executor with priority 3 and queue default
+2024-05-19 02:34:29,560 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:29,560 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='unzip_data', run_id='manual__2024-05-18T21:04:03.051208+00:00', try_number=1) to executor with priority 2 and queue default
+2024-05-19 02:34:29,560 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:29,561 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'fetch_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:55,422 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:57,569 INFO - Executor reports execution of keypoints_dag.fetch_data run_id=manual__2024-05-18T21:04:07.629303+00:00 exited with status success for try_number 1
+2024-05-19 02:34:57,570 INFO - Executor reports execution of keypoints_dag.unzip_data run_id=manual__2024-05-18T21:04:03.051208+00:00 exited with status success for try_number 1
+2024-05-19 02:34:57,576 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=unzip_data, run_id=manual__2024-05-18T21:04:03.051208+00:00, run_start_date=2024-05-18 21:04:56.608654+00:00, run_end_date=2024-05-18 21:04:57.356542+00:00, run_duration=0.747888, state=success, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator
+2024-05-19 02:34:57,577 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=fetch_data, run_id=manual__2024-05-18T21:04:07.629303+00:00, run_start_date=2024-05-18 21:04:30.791429+00:00, run_end_date=2024-05-18 21:04:55.200266+00:00, run_duration=24.408837, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator
+2024-05-19 02:34:58,412 INFO - 2 tasks up for execution:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:58,413 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 2 task instances ready to be queued
+2024-05-19 02:34:58,413 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:34:58,413 INFO - DAG keypoints_dag has 1/16 running and queued tasks
+2024-05-19 02:34:58,413 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.unzip_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:04:03.051208+00:00 [scheduled]>
+2024-05-19 02:34:58,414 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='unzip_data', run_id='manual__2024-05-18T21:04:07.629303+00:00', try_number=1) to executor with priority 2 and queue default
+2024-05-19 02:34:58,415 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:58,415 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='preprocess_data', run_id='manual__2024-05-18T21:04:03.051208+00:00', try_number=1) to executor with priority 1 and queue default
+2024-05-19 02:34:58,415 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:34:58,416 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'unzip_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:35:00,499 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:04:03.051208+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:35:09,984 INFO - Executor reports execution of keypoints_dag.unzip_data run_id=manual__2024-05-18T21:04:07.629303+00:00 exited with status success for try_number 1
+2024-05-19 02:35:09,985 INFO - Executor reports execution of keypoints_dag.preprocess_data run_id=manual__2024-05-18T21:04:03.051208+00:00 exited with status success for try_number 1
+2024-05-19 02:35:09,991 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=preprocess_data, run_id=manual__2024-05-18T21:04:03.051208+00:00, run_start_date=2024-05-18 21:05:01.689407+00:00, run_end_date=2024-05-18 21:05:09.802925+00:00, run_duration=8.113518, state=success, executor_state=success, try_number=1, max_tries=0, job_id=15, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator
+2024-05-19 02:35:09,992 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=unzip_data, run_id=manual__2024-05-18T21:04:07.629303+00:00, run_start_date=2024-05-18 21:04:59.589479+00:00, run_end_date=2024-05-18 21:05:00.322080+00:00, run_duration=0.732601, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=2, operator=PythonOperator
+2024-05-19 02:35:10,878 INFO - Marking run <DagRun keypoints_dag @ 2024-05-18 21:04:03.051208+00:00: manual__2024-05-18T21:04:03.051208+00:00, externally triggered: True> successful
+2024-05-19 02:35:10,878 INFO - DagRun Finished: dag_id=keypoints_dag, execution_date=2024-05-18 21:04:03.051208+00:00, run_id=manual__2024-05-18T21:04:03.051208+00:00, run_start_date=2024-05-18 21:04:04.164437+00:00, run_end_date=2024-05-18 21:05:10.878735+00:00, run_duration=66.714298, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-05-17 00:00:00+00:00, data_interval_end=2024-05-18 00:00:00+00:00, dag_hash=5d7d011f98c4ba0d1ded6f56d4f2610b
+2024-05-19 02:35:10,880 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
+2024-05-19 02:35:10,885 INFO - 1 tasks up for execution:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+2024-05-19 02:35:10,886 INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+2024-05-19 02:35:10,886 INFO - DAG keypoints_dag has 0/16 running and queued tasks
+2024-05-19 02:35:10,886 INFO - Setting the following tasks to queued state:
+	<TaskInstance: keypoints_dag.preprocess_data manual__2024-05-18T21:04:07.629303+00:00 [scheduled]>
+2024-05-19 02:35:10,887 INFO - Sending TaskInstanceKey(dag_id='keypoints_dag', task_id='preprocess_data', run_id='manual__2024-05-18T21:04:07.629303+00:00', try_number=1) to executor with priority 1 and queue default
+2024-05-19 02:35:10,888 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:35:10,888 INFO - Executing command: ['airflow', 'tasks', 'run', 'keypoints_dag', 'preprocess_data', 'manual__2024-05-18T21:04:07.629303+00:00', '--local', '--subdir', 'DAGS_FOLDER/preprocess_airflow.py']
+2024-05-19 02:35:21,197 INFO - Executor reports execution of keypoints_dag.preprocess_data run_id=manual__2024-05-18T21:04:07.629303+00:00 exited with status success for try_number 1
+2024-05-19 02:35:21,203 INFO - TaskInstance Finished: dag_id=keypoints_dag, task_id=preprocess_data, run_id=manual__2024-05-18T21:04:07.629303+00:00, run_start_date=2024-05-18 21:05:12.061524+00:00, run_end_date=2024-05-18 21:05:20.951908+00:00, run_duration=8.890384, state=success, executor_state=success, try_number=1, max_tries=0, job_id=16, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator
+2024-05-19 02:35:22,086 INFO - Marking run <DagRun keypoints_dag @ 2024-05-18 21:04:07.629303+00:00: manual__2024-05-18T21:04:07.629303+00:00, externally triggered: True> successful
+2024-05-19 02:35:22,086 INFO - DagRun Finished: dag_id=keypoints_dag, execution_date=2024-05-18 21:04:07.629303+00:00, run_id=manual__2024-05-18T21:04:07.629303+00:00, run_start_date=2024-05-18 21:04:29.538415+00:00, run_end_date=2024-05-18 21:05:22.086788+00:00, run_duration=52.548373, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-05-17 00:00:00+00:00, data_interval_end=2024-05-18 00:00:00+00:00, dag_hash=5d7d011f98c4ba0d1ded6f56d4f2610b
+2024-05-19 02:35:22,088 INFO - Setting next_dagrun for keypoints_dag to 2024-05-18T00:00:00+00:00
