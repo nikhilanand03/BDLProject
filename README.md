@@ -68,7 +68,7 @@ processing_time_per_char (Gauge)
 
 Now we start the Grafana Server at the port 3000, and we can create panels to visualise our Gauges and Counters using the GUI functions of the Grafana interface.
 
-## Setting up and running Docker containers
+## 5. Setting up and running Docker containers
 
 Run the following commands starting from the home directory in order to start a docker container.
 
