@@ -43,3 +43,38 @@ In the `mlflow_part` directory, the notebook `final_colab_notebook_mlflow.ipynb`
 | 8e-5 (7) + 4e-5 (3) | 7 + 3 | 24.01 |
 | 8e-5 (12) + 4e-5 (8) | 12 + 8 | 11.26 |
 | 8e-5 (12) + 4e-5 (11) + 8e-6 (2) | 12 + 11 + 2 | 10.97 |
+
+## 3. Backend: Deploying the model to FastAPI
+
+The `fastapi_part` directory has the `server.py` file which helps us deploy the model. Run the following commands:
+
+```
+cd fastapi_part
+python3 server.py
+```
+
+The go to `0.0.0.0:8000/docs` to access the SwaggerUI interface. A test image can be inputted at the `/predict` endpoint and the list of coordinates is outputted. 
+
+## 4. Prometheus and Grafana Visualisation
+
+Start the prometheus server at `0.0.0.0:9090` using the executable and the default yml file (listening at the target port 8000) in the same directory. The following parameters can be visualised by our code.
+
+```
+input_length (Gauge)
+total_time (Gauge)
+api_client_requests_total (Counter)
+processing_time_per_char (Gauge)
+```
+
+Now we start the Grafana Server at the port 3000, and we can create panels to visualise our Gauges and Counters using the GUI functions of the Grafana interface.
+
+## 5. Setting up and running Docker containers
+
+Run the following commands starting from the home directory in order to start a docker container.
+
+```
+cd fastapi_part
+docker compose up --build fastapi_app
+```
+
+A docker container with a new IP will start running and you can track the metrics through Grafana.
